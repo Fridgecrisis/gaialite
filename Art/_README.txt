@@ -1,0 +1,1 @@
+This isn't ALL the art--just whatever is needed for collaboration and transfer between workplaces. More official stuff will tend to end up here, while the full collection is in the main folder on my computer.
