@@ -62,7 +62,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 125.171875
+        x: 365.17188
         y: 443.42188
         width: 100
         height: 32
@@ -141,7 +141,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 125.171875
+        x: 365.17188
         y: 495.42188
         width: 100
         height: 32
@@ -240,7 +240,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 566.8125
+        x: 806.8125
         y: 511.10156
         width: 125
         height: 32
@@ -300,7 +300,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 575.27344
+        x: 815.27344
         y: 585.6719
         width: 114
         height: 32
@@ -521,7 +521,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 332.0703
+        x: 572.0703
         y: 744.1797
         width: 165
         height: 48
@@ -925,7 +925,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 574.6797
+        x: 814.6797
         y: 760.28906
         width: 105
         height: 32
@@ -985,46 +985,70 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 563.5625
-        y: 838.16406
-        width: 131
-        height: 48
+        x: 812.0625
+        y: 836.6719
+        width: 151
+        height: 32
       isBreakpoint: 0
       isSequence: 0
       hideUnused: 0
       transitions:
       - fsmEvent:
-          name: Continue Battle
+          name: Determine Winner
           isSystemEvent: 0
           isGlobal: 0
-        toState: Start of Round
-        linkStyle: 0
-        linkConstraint: 0
-        colorIndex: 0
-      - fsmEvent:
-          name: End Battle
-          isSystemEvent: 0
-          isGlobal: 0
-        toState: End Battle
+        toState: Setup "CheckForBattleEnd" Loop
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
       actionData:
         actionNames:
-        - HutongGames.PlayMaker.Actions.BoolTest
+        - HutongGames.PlayMaker.Actions.SendEvent
         customNames:
         - 
         actionEnabled: 01
         actionIsOpen: 01
         actionStartIndex: 00000000
-        actionHashCodes: a4c8bf00
+        actionHashCodes: 5e69bb04
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams: []
         animationCurveParams: []
         functionCallParams: []
         fsmTemplateControlParams: []
-        fsmEventTargetParams: []
+        fsmEventTargetParams:
+        - target: 0
+          excludeSelf:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 0
+          gameObject:
+            ownerOption: 0
+            gameObject:
+              useVariable: 0
+              name: 
+              tooltip: 
+              showInInspector: 0
+              networkSync: 0
+              value: {fileID: 0}
+          fsmName:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 
+          sendToChildren:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 0
+          fsmComponent: {fileID: 0}
         fsmPropertyParams: []
         layoutOptionParams: []
         fsmStringParams: []
@@ -1032,42 +1056,41 @@ MonoBehaviour:
         fsmVarParams: []
         fsmArrayParams: []
         fsmEnumParams: []
-        fsmFloatParams: []
-        fsmIntParams: []
-        fsmBoolParams:
-        - useVariable: 1
-          name: End Battle
+        fsmFloatParams:
+        - useVariable: 0
+          name: 
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: 0
+        fsmIntParams: []
+        fsmBoolParams: []
         fsmVector2Params: []
         fsmVector3Params: []
         fsmColorParams: []
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams:
-        - End Battle
-        - Continue Battle
+        - Determine Winner
         byteData: 00
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 11000000170000001700000001000000
+        paramDataType: 1f000000170000000f00000001000000
         paramName:
-        - boolVariable
-        - isTrue
-        - isFalse
+        - eventTarget
+        - sendEvent
+        - delay
         - everyFrame
-        paramDataPos: 00000000000000000100000000000000
+        paramDataPos: 00000000000000000000000000000000
         paramByteDataSize: 00000000000000000000000001000000
     - name: '"HighSpeed" Loop Through Battlers'
       description: 
       colorIndex: 4
       position:
         serializedVersion: 2
-        x: 1875.4531
+        x: 2115.4531
         y: 433.03125
         width: 265
         height: 64
@@ -1263,7 +1286,7 @@ MonoBehaviour:
       colorIndex: 4
       position:
         serializedVersion: 2
-        x: 1625.5703
+        x: 1865.5703
         y: 439.02344
         width: 193
         height: 32
@@ -1447,7 +1470,7 @@ MonoBehaviour:
       colorIndex: 4
       position:
         serializedVersion: 2
-        x: 2217.6172
+        x: 2457.6172
         y: 399.46875
         width: 185
         height: 32
@@ -1623,7 +1646,7 @@ MonoBehaviour:
       colorIndex: 4
       position:
         serializedVersion: 2
-        x: 2466.8438
+        x: 2706.8438
         y: 433.85156
         width: 223
         height: 48
@@ -1731,7 +1754,7 @@ MonoBehaviour:
       colorIndex: 4
       position:
         serializedVersion: 2
-        x: 2229.1562
+        x: 2469.1562
         y: 485.29688
         width: 152
         height: 32
@@ -1832,7 +1855,7 @@ MonoBehaviour:
       colorIndex: 4
       position:
         serializedVersion: 2
-        x: 1881.625
+        x: 2121.625
         y: 376.5625
         width: 201
         height: 32
@@ -1970,7 +1993,7 @@ MonoBehaviour:
       colorIndex: 4
       position:
         serializedVersion: 2
-        x: 2460.6328
+        x: 2700.6328
         y: 549.625
         width: 268
         height: 48
@@ -2052,7 +2075,7 @@ MonoBehaviour:
       colorIndex: 4
       position:
         serializedVersion: 2
-        x: 2205.75
+        x: 2445.75
         y: 582.1953
         width: 178
         height: 32
@@ -2243,7 +2266,7 @@ MonoBehaviour:
       colorIndex: 3
       position:
         serializedVersion: 2
-        x: 792.0156
+        x: 1032.0156
         y: 188.84375
         width: 206
         height: 32
@@ -2366,7 +2389,7 @@ MonoBehaviour:
       colorIndex: 3
       position:
         serializedVersion: 2
-        x: 1072.5391
+        x: 1312.5391
         y: 103.5625
         width: 164
         height: 48
@@ -2599,7 +2622,7 @@ MonoBehaviour:
       colorIndex: 3
       position:
         serializedVersion: 2
-        x: 1522.7188
+        x: 1762.7188
         y: 177.375
         width: 236
         height: 48
@@ -2707,7 +2730,7 @@ MonoBehaviour:
       colorIndex: 3
       position:
         serializedVersion: 2
-        x: 1140.1094
+        x: 1380.1094
         y: 212.48438
         width: 245
         height: 48
@@ -2789,7 +2812,7 @@ MonoBehaviour:
       colorIndex: 3
       position:
         serializedVersion: 2
-        x: 1340.4375
+        x: 1580.4375
         y: 106.609375
         width: 117
         height: 32
@@ -2861,29 +2884,49 @@ MonoBehaviour:
         - everyFrame
         paramDataPos: 000000000100000000000000
         paramByteDataSize: 000000000000000001000000
-    - name: End Battle
+    - name: Players Win
       description: 
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 803.625
-        y: 938
-        width: 100
-        height: 16
+        x: 735.25
+        y: 1052.5547
+        width: 110
+        height: 32
       isBreakpoint: 0
       isSequence: 0
       hideUnused: 0
-      transitions: []
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: End Battle
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
       actionData:
-        actionNames: []
-        customNames: []
-        actionEnabled: 
-        actionIsOpen: 
-        actionStartIndex: 
-        actionHashCodes: 
+        actionNames:
+        - HutongGames.PlayMaker.Actions.ActivateGameObject
+        - HutongGames.PlayMaker.Actions.Wait
+        customNames:
+        - 
+        - 
+        actionEnabled: 0101
+        actionIsOpen: 0101
+        actionStartIndex: 0000000005000000
+        actionHashCodes: b2cf100048c01101
         unityObjectParams: []
         fsmGameObjectParams: []
-        fsmOwnerDefaultParams: []
+        fsmOwnerDefaultParams:
+        - ownerOption: 1
+          gameObject:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
         animationCurveParams: []
         functionCallParams: []
         fsmTemplateControlParams: []
@@ -2895,30 +2938,57 @@ MonoBehaviour:
         fsmVarParams: []
         fsmArrayParams: []
         fsmEnumParams: []
-        fsmFloatParams: []
+        fsmFloatParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 1
         fsmIntParams: []
-        fsmBoolParams: []
+        fsmBoolParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 1
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
         fsmVector2Params: []
         fsmVector3Params: []
         fsmColorParams: []
         fsmRectParams: []
         fsmQuaternionParams: []
-        stringParams: []
-        byteData: 
+        stringParams:
+        - FINISHED
+        byteData: 010000
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 
-        paramName: []
-        paramDataPos: 
-        paramByteDataSize: 
+        paramDataType: 14000000110000001100000001000000010000000f0000001700000001000000
+        paramName:
+        - gameObject
+        - activate
+        - recursive
+        - resetOnExit
+        - everyFrame
+        - time
+        - finishEvent
+        - realTime
+        paramDataPos: 0000000000000000010000000000000001000000000000000000000002000000
+        paramByteDataSize: 0000000000000000000000000100000001000000000000000000000001000000
     - name: Setup "Check100Speed" Loop
       description: 
       colorIndex: 7
       position:
         serializedVersion: 2
-        x: 1191.8203
+        x: 1431.8203
         y: 749.5547
         width: 230
         height: 32
@@ -3041,7 +3111,7 @@ MonoBehaviour:
       colorIndex: 7
       position:
         serializedVersion: 2
-        x: 1473.5938
+        x: 1713.5938
         y: 715.52344
         width: 188
         height: 48
@@ -3229,7 +3299,7 @@ MonoBehaviour:
       colorIndex: 7
       position:
         serializedVersion: 2
-        x: 1578.9766
+        x: 1818.9766
         y: 810.64844
         width: 260
         height: 48
@@ -3337,7 +3407,7 @@ MonoBehaviour:
       colorIndex: 7
       position:
         serializedVersion: 2
-        x: 1247.6016
+        x: 1487.6016
         y: 807.8125
         width: 221
         height: 48
@@ -3419,7 +3489,7 @@ MonoBehaviour:
       colorIndex: 7
       position:
         serializedVersion: 2
-        x: 1732.8047
+        x: 1972.8047
         y: 739.5078
         width: 243
         height: 32
@@ -3496,7 +3566,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 322.02344
+        x: 562.02344
         y: 632.375
         width: 185
         height: 32
@@ -3598,11 +3668,11 @@ MonoBehaviour:
         paramByteDataSize: 00000000000000000000000001000000
     - name: Subtract Index
       description: 
-      colorIndex: 0
+      colorIndex: 1
       position:
         serializedVersion: 2
-        x: 80.59375
-        y: 817.3047
+        x: 83.05469
+        y: 945.3906
         width: 156
         height: 48
       isBreakpoint: 0
@@ -3706,11 +3776,11 @@ MonoBehaviour:
         paramByteDataSize: 000000000000000001000000000000000000000000000000000000000000000001000000
     - name: Wrap to Max Index
       description: 
-      colorIndex: 0
+      colorIndex: 1
       position:
         serializedVersion: 2
-        x: 81.109375
-        y: 889.53125
+        x: 83.57031
+        y: 1017.6172
         width: 156
         height: 32
       isBreakpoint: 0
@@ -3800,11 +3870,11 @@ MonoBehaviour:
         paramByteDataSize: 000000000000000001000000000000000000000001000000
     - name: Set New Target
       description: 
-      colorIndex: 0
+      colorIndex: 1
       position:
         serializedVersion: 2
-        x: 205.1875
-        y: 1028.3203
+        x: 207.64844
+        y: 1156.4062
         width: 133
         height: 16
       isBreakpoint: 0
@@ -3956,11 +4026,11 @@ MonoBehaviour:
         paramByteDataSize: 0000000000000000000000000100000000000000000000000000000001000000000000000000000000000000010000000100000000000000
     - name: Add Index
       description: 
-      colorIndex: 0
+      colorIndex: 1
       position:
         serializedVersion: 2
-        x: 296.78906
-        y: 814.59375
+        x: 299.25
+        y: 942.6797
         width: 117
         height: 48
       isBreakpoint: 0
@@ -4064,11 +4134,11 @@ MonoBehaviour:
         paramByteDataSize: 000000000000000001000000000000000000000000000000000000000000000001000000
     - name: Wrap to Zero
       description: 
-      colorIndex: 0
+      colorIndex: 1
       position:
         serializedVersion: 2
-        x: 298.89062
-        y: 889
+        x: 301.35156
+        y: 1017.08594
         width: 117
         height: 32
       isBreakpoint: 0
@@ -4141,11 +4211,11 @@ MonoBehaviour:
         paramByteDataSize: 000000000000000001000000
     - name: Is Target Dead (Minus)
       description: 
-      colorIndex: 0
+      colorIndex: 1
       position:
         serializedVersion: 2
-        x: 55.890625
-        y: 948.46094
+        x: 58.351562
+        y: 1076.5469
         width: 184
         height: 48
       isBreakpoint: 0
@@ -4312,11 +4382,11 @@ MonoBehaviour:
         paramByteDataSize: 0000000000000000000000000100000000000000000000000000000000000000000000000100000000000000000000000000000001000000
     - name: Is Target Dead (Plus)
       description: 
-      colorIndex: 0
+      colorIndex: 1
       position:
         serializedVersion: 2
-        x: 291.3828
-        y: 949.9531
+        x: 293.84375
+        y: 1078.0391
         width: 174
         height: 48
       isBreakpoint: 0
@@ -4481,6 +4551,1019 @@ MonoBehaviour:
         - everyFrame
         paramDataPos: 0000000000000000000000000000000000000000000000000000000001000000000000000100000001000000010000000200000002000000
         paramByteDataSize: 0000000000000000000000000100000000000000000000000000000000000000000000000100000000000000000000000000000001000000
+    - name: Setup "CheckForBattleEnd" Loop
+      description: 
+      colorIndex: 5
+      position:
+        serializedVersion: 2
+        x: 1409.3906
+        y: 1082.375
+        width: 247
+        height: 32
+      isBreakpoint: 0
+      isSequence: 1
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: '"CheckForBattleEnd" Loop'
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.SetIntValue
+        - HutongGames.PlayMaker.Actions.SetBoolValue
+        - HutongGames.PlayMaker.Actions.SetBoolValue
+        customNames:
+        - 
+        - 
+        - 
+        actionEnabled: 010101
+        actionIsOpen: 010101
+        actionStartIndex: 000000000300000006000000
+        actionHashCodes: 603dd90527fbe10327fbe103
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams:
+        - useVariable: 1
+          name: Loop Index
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmBoolParams:
+        - useVariable: 1
+          name: All Players Dead
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 1
+        - useVariable: 1
+          name: All Enemies Dead
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 1
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 000000
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 100000001000000001000000110000001100000001000000110000001100000001000000
+        paramName:
+        - intVariable
+        - intValue
+        - everyFrame
+        - boolVariable
+        - boolValue
+        - everyFrame
+        - boolVariable
+        - boolValue
+        - everyFrame
+        paramDataPos: 000000000100000000000000000000000100000001000000020000000300000002000000
+        paramByteDataSize: 000000000000000001000000000000000000000001000000000000000000000001000000
+    - name: '"CheckForBattleEnd" Loop'
+      description: 
+      colorIndex: 5
+      position:
+        serializedVersion: 2
+        x: 1720.0156
+        y: 1084.0469
+        width: 205
+        height: 48
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: Increment Loop
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: Increment "CheckForBattleEnd" Loop
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      - fsmEvent:
+          name: Is Alive
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: '"CheckForBattleEnd" Alive Battler Tag'
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.ArrayGet
+        - HutongGames.PlayMaker.Actions.GetFsmBool
+        - HutongGames.PlayMaker.Actions.BoolTest
+        customNames:
+        - 
+        - 
+        - 
+        actionEnabled: 010101
+        actionIsOpen: 010101
+        actionStartIndex: 00000000050000000a000000
+        actionHashCodes: 6ba5930168fece05a4c8bf00
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams:
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: Current Loop Battler
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: IsDead
+        fsmObjectParams: []
+        fsmVarParams:
+        - variableName: Current Loop Battler
+          objectType: UnityEngine.GameObject
+          useVariable: 1
+          type: 3
+          floatValue: 0
+          intValue: 0
+          boolValue: 0
+          stringValue: 
+          vector4Value: {x: 0, y: 0, z: 0, w: 0}
+          objectReference: {fileID: 0}
+          arrayValue:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            type: -1
+            objectTypeName: 
+            floatValues: []
+            intValues: 
+            boolValues: 
+            stringValues: []
+            vector4Values: []
+            objectReferences: []
+        fsmArrayParams:
+        - useVariable: 1
+          name: All Battlers
+          tooltip: 
+          showInInspector: 1
+          networkSync: 0
+          type: 3
+          objectTypeName: UnityEngine.GameObject
+          floatValues: []
+          intValues: 
+          boolValues: 
+          stringValues: []
+          vector4Values: []
+          objectReferences:
+          - {fileID: 0}
+          - {fileID: 0}
+          - {fileID: 0}
+          - {fileID: 0}
+          - {fileID: 0}
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams:
+        - useVariable: 1
+          name: Loop Index
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmBoolParams:
+        - useVariable: 1
+          name: Current Loop Battler Dead
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: Current Loop Battler Dead
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams:
+        - 
+        - Increment Loop
+        - Is Alive
+        byteData: 000000
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 2900000010000000270000000100000017000000140000001200000012000000110000000100000011000000170000001700000001000000
+        paramName:
+        - array
+        - index
+        - storeValue
+        - everyFrame
+        - indexOutOfRange
+        - gameObject
+        - fsmName
+        - variableName
+        - storeValue
+        - everyFrame
+        - boolVariable
+        - isTrue
+        - isFalse
+        - everyFrame
+        paramDataPos: 0000000000000000000000000000000000000000000000000000000001000000000000000100000001000000010000000200000002000000
+        paramByteDataSize: 0000000000000000000000000100000000000000000000000000000000000000000000000100000000000000000000000000000001000000
+    - name: '"CheckForBattleEnd" Alive Battler Tag'
+      description: 
+      colorIndex: 5
+      position:
+        serializedVersion: 2
+        x: 1988.7734
+        y: 1038.4219
+        width: 283
+        height: 48
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: IsPlayer
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: '"CheckForBattleEnd" Players Not Dead'
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      - fsmEvent:
+          name: IsEnemy
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: '"CheckForBattleEnd" Enemies Not Dead'
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.GameObjectCompareTag
+        - HutongGames.PlayMaker.Actions.GameObjectCompareTag
+        customNames:
+        - 
+        - 
+        actionEnabled: 0101
+        actionIsOpen: 0101
+        actionStartIndex: 0000000006000000
+        actionHashCodes: 7b3126027b312602
+        unityObjectParams: []
+        fsmGameObjectParams:
+        - useVariable: 1
+          name: Current Loop Battler
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        - useVariable: 1
+          name: Current Loop Battler
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: Player
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: Enemy
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams:
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams:
+        - IsPlayer
+        - 
+        - IsEnemy
+        - 
+        byteData: 0000
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 130000001200000017000000170000001100000001000000130000001200000017000000170000001100000001000000
+        paramName:
+        - gameObject
+        - tag
+        - trueEvent
+        - falseEvent
+        - storeResult
+        - everyFrame
+        - gameObject
+        - tag
+        - trueEvent
+        - falseEvent
+        - storeResult
+        - everyFrame
+        paramDataPos: 000000000000000000000000010000000000000000000000010000000100000002000000030000000100000001000000
+        paramByteDataSize: 000000000000000000000000000000000000000001000000000000000000000000000000000000000000000001000000
+    - name: '"CheckForBattleEnd" Players Not Dead'
+      description: 
+      colorIndex: 5
+      position:
+        serializedVersion: 2
+        x: 2326.1406
+        y: 1009.5
+        width: 288
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: Increment "CheckForBattleEnd" Loop
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.SetBoolValue
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex: 00000000
+        actionHashCodes: 27fbe103
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams:
+        - useVariable: 1
+          name: All Players Dead
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 00
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 110000001100000001000000
+        paramName:
+        - boolVariable
+        - boolValue
+        - everyFrame
+        paramDataPos: 000000000100000000000000
+        paramByteDataSize: 000000000000000001000000
+    - name: '"CheckForBattleEnd" Enemies Not Dead'
+      description: 
+      colorIndex: 5
+      position:
+        serializedVersion: 2
+        x: 2324.5156
+        y: 1099.8594
+        width: 293
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: Increment "CheckForBattleEnd" Loop
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.SetBoolValue
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex: 00000000
+        actionHashCodes: 27fbe103
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams:
+        - useVariable: 1
+          name: All Enemies Dead
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 00
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 110000001100000001000000
+        paramName:
+        - boolVariable
+        - boolValue
+        - everyFrame
+        paramDataPos: 000000000100000000000000
+        paramByteDataSize: 000000000000000001000000
+    - name: Increment "CheckForBattleEnd" Loop
+      description: 
+      colorIndex: 5
+      position:
+        serializedVersion: 2
+        x: 1716.9844
+        y: 1175.4297
+        width: 277
+        height: 48
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: Continue Loop
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: '"CheckForBattleEnd" Loop'
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: End Battle or Continue
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.IntAdd
+        - HutongGames.PlayMaker.Actions.IntCompare
+        customNames:
+        - 
+        - 
+        actionEnabled: 0101
+        actionIsOpen: 0101
+        actionStartIndex: 0000000003000000
+        actionHashCodes: 603dd90509faa102
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams:
+        - useVariable: 1
+          name: Loop Index
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 1
+        - useVariable: 1
+          name: Loop Index
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: Number of Battlers
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams:
+        - FINISHED
+        - Continue Loop
+        - FINISHED
+        byteData: 0000
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 100000001000000001000000100000001000000017000000170000001700000001000000
+        paramName:
+        - intVariable
+        - add
+        - everyFrame
+        - integer1
+        - integer2
+        - equal
+        - lessThan
+        - greaterThan
+        - everyFrame
+        paramDataPos: 000000000100000000000000020000000300000000000000010000000200000001000000
+        paramByteDataSize: 000000000000000001000000000000000000000000000000000000000000000001000000
+    - name: End Battle or Continue
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 804.21875
+        y: 923.9453
+        width: 177
+        height: 64
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: Players Win
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: Players Win
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      - fsmEvent:
+          name: Enemies Win
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: Enemies Win
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      - fsmEvent:
+          name: Continue Battle
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: Start of Round
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.BoolTest
+        - HutongGames.PlayMaker.Actions.BoolTest
+        - HutongGames.PlayMaker.Actions.SendEvent
+        customNames:
+        - 
+        - 
+        - 
+        actionEnabled: 010101
+        actionIsOpen: 010101
+        actionStartIndex: 000000000400000008000000
+        actionHashCodes: a4c8bf00a4c8bf005e69bb04
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams:
+        - target: 0
+          excludeSelf:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 0
+          gameObject:
+            ownerOption: 0
+            gameObject:
+              useVariable: 0
+              name: 
+              tooltip: 
+              showInInspector: 0
+              networkSync: 0
+              value: {fileID: 0}
+          fsmName:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 
+          sendToChildren:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 0
+          fsmComponent: {fileID: 0}
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmIntParams: []
+        fsmBoolParams:
+        - useVariable: 1
+          name: All Players Dead
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: All Enemies Dead
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams:
+        - Enemies Win
+        - 
+        - Players Win
+        - 
+        - Continue Battle
+        byteData: 000000
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 11000000170000001700000001000000110000001700000017000000010000001f000000170000000f00000001000000
+        paramName:
+        - boolVariable
+        - isTrue
+        - isFalse
+        - everyFrame
+        - boolVariable
+        - isTrue
+        - isFalse
+        - everyFrame
+        - eventTarget
+        - sendEvent
+        - delay
+        - everyFrame
+        paramDataPos: 000000000000000001000000000000000100000002000000030000000100000000000000040000000000000002000000
+        paramByteDataSize: 000000000000000000000000010000000000000000000000000000000100000000000000000000000000000001000000
+    - name: Enemies Win
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 930.3828
+        y: 1053.1016
+        width: 115
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: End Battle
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.ActivateGameObject
+        - HutongGames.PlayMaker.Actions.Wait
+        customNames:
+        - 
+        - 
+        actionEnabled: 0101
+        actionIsOpen: 0101
+        actionStartIndex: 0000000005000000
+        actionHashCodes: b2cf100048c01101
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams:
+        - ownerOption: 1
+          gameObject:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 1
+        fsmIntParams: []
+        fsmBoolParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 1
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams:
+        - FINISHED
+        byteData: 010000
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 14000000110000001100000001000000010000000f0000001700000001000000
+        paramName:
+        - gameObject
+        - activate
+        - recursive
+        - resetOnExit
+        - everyFrame
+        - time
+        - finishEvent
+        - realTime
+        paramDataPos: 0000000000000000010000000000000001000000000000000000000002000000
+        paramByteDataSize: 0000000000000000000000000100000001000000000000000000000001000000
+    - name: End Battle
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 840.0469
+        y: 1138.9375
+        width: 100
+        height: 16
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions: []
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.SendEvent
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex: 00000000
+        actionHashCodes: 5e69bb04
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams:
+        - target: 1
+          excludeSelf:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 0
+          gameObject:
+            ownerOption: 1
+            gameObject:
+              useVariable: 0
+              name: 
+              tooltip: 
+              showInInspector: 0
+              networkSync: 0
+              value: {fileID: 0}
+          fsmName:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 
+          sendToChildren:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 0
+          fsmComponent: {fileID: 0}
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams:
+        - End Battle
+        byteData: 00
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 1f000000170000000f00000001000000
+        paramName:
+        - eventTarget
+        - sendEvent
+        - delay
+        - everyFrame
+        paramDataPos: 00000000000000000000000000000000
+        paramByteDataSize: 00000000000000000000000001000000
     events:
     - name: FINISHED
       isSystemEvent: 1
@@ -4500,15 +5583,21 @@ MonoBehaviour:
     - name: Continue Round
       isSystemEvent: 0
       isGlobal: 0
-    - name: End Battle
+    - name: Determine Winner
       isSystemEvent: 0
       isGlobal: 0
+    - name: End Battle
+      isSystemEvent: 0
+      isGlobal: 1
     - name: End Round
       isSystemEvent: 0
       isGlobal: 0
     - name: End of Turn
       isSystemEvent: 0
       isGlobal: 1
+    - name: Enemies Win
+      isSystemEvent: 0
+      isGlobal: 0
     - name: Enemy Turn
       isSystemEvent: 0
       isGlobal: 0
@@ -4527,10 +5616,22 @@ MonoBehaviour:
     - name: Increment Loop
       isSystemEvent: 0
       isGlobal: 0
+    - name: Is Alive
+      isSystemEvent: 0
+      isGlobal: 0
     - name: Is Valid Target
       isSystemEvent: 0
       isGlobal: 0
+    - name: IsEnemy
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: IsPlayer
+      isSystemEvent: 0
+      isGlobal: 0
     - name: Player Turn
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: Players Win
       isSystemEvent: 0
       isGlobal: 0
     - name: Reached 100
@@ -4704,6 +5805,24 @@ MonoBehaviour:
         showInInspector: 0
         networkSync: 0
         value: 0
+      - useVariable: 1
+        name: All Players Dead
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: 0
+      - useVariable: 1
+        name: Current Loop Battler Dead
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: 0
+      - useVariable: 1
+        name: All Enemies Dead
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: 0
       stringVariables: []
       vector2Variables: []
       vector3Variables:
@@ -4810,7 +5929,7 @@ MonoBehaviour:
       enumVariables: []
       categories:
       - 
-      variableCategoryIDs: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+      variableCategoryIDs: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
     description: 
     docUrl: 
     showStateLabel: 0
