@@ -39,3 +39,8 @@ MonoBehaviour:
   - Take Turn
   - End Battle
   - Add 1 Shard
+  - Pause Input
+  - Open Menu
+  - Free Movement
+  - Disable Menu
+  - Enable Menu
