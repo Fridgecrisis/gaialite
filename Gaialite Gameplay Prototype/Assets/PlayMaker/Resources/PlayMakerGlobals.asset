@@ -44,3 +44,12 @@ MonoBehaviour:
   - Free Movement
   - Disable Menu
   - Enable Menu
+  - Initialize
+  - BeginTitleScreen
+  - Activate
+  - BeginNewGame
+  - Deactivate
+  - QuitGame
+  - LoadGame
+  - GoBack
+  - ReturnTo
