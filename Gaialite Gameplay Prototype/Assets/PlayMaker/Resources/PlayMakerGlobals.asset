@@ -53,3 +53,7 @@ MonoBehaviour:
   - LoadGame
   - GoBack
   - ReturnTo
+  - CloseMenu
+  - ReturnToTitle
+  - LoadNextMap
+  - UnloadCurrentMap
