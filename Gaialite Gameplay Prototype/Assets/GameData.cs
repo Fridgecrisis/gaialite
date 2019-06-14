@@ -8,30 +8,41 @@ public class GameData : MonoBehaviour {
 	public string nextMapName;
 	
 	public bool seenIntro;
-
+	
 	void Start () {
 	}
 	
 	void Update () {
 	}
 
-/* 	public Dictionary<string, bool> gameProgress;
-
-	void Start () {
-		
-	}
+//--- Game Progress ---//
 	
-	void Update () {
-		
-	}
+	public Dictionary<string, bool> gameProgress;
 	
-	void Initialize () {
+	void InitializeProgress () {
 		AddProgressItem("Seen intro", false);
 	}
 	
-	void AddProgressItem (string name, bool progressValue) {
+	void AddProgressItem (string name, bool progressValue = false) {
 		if (!gameProgress.ContainsKey(name)) {
 			gameProgress.Add(name, progressValue);
 		}
-	} */
+	}
+	
+	bool GetProgress (string name) {
+		if (!gameProgress.ContainsKey(name)) {
+			Debug.LogWarning("Progress item '" + name + "' not found. Returning false.");
+			return false;
+		}
+		return gameProgress[name];
+	}
+	
+	void SetProgress (string name, bool progressValue = true) {
+		if (!gameProgress.ContainsKey(name)) {
+			gameProgress.Add(name, progressValue);
+		} else {
+			gameProgress[name] = progressValue;
+		}
+	}
+	
 }
