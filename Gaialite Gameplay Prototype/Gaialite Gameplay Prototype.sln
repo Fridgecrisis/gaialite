@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gaialite Gameplay Prototype", "Assembly-CSharp.csproj", "{57E23D2B-0D2D-6ADA-2EA2-1991A5A29593}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{57E23D2B-0D2D-6ADA-2EA2-1991A5A29593}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gaialite Gameplay Prototype", "Assembly-CSharp-Editor.csproj", "{49511759-438E-6388-BB06-BC9A198BDFB8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor", "Assembly-CSharp-Editor.csproj", "{49511759-438E-6388-BB06-BC9A198BDFB8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

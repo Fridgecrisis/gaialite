@@ -4,8 +4,12 @@ using UnityEngine;
 
 public class GameData : MonoBehaviour {
 
-	public string currentMapName;
-	public string nextMapName;
+	public GameObject GameManager;
+	
+	public string currentMapSceneName;
+	public string nextMapSceneName;
+	public string currentBattleName;
+	public string nextBattleName;
 	
 	public bool seenIntro;
 	
@@ -15,6 +19,45 @@ public class GameData : MonoBehaviour {
 	void Update () {
 	}
 
+//--- Content Type ---//
+
+	public string currentContentType;
+	public string nextContentType;
+	
+	public void SetCurrentContentType (string name) {
+		currentContentType = name;
+	}
+	
+	public void SetNextContentType (string name) {
+		nextContentType = name;
+	}
+	
+//--- Map Data ---//
+	
+	public string currentMapName;
+	public string nextMapName;
+	
+	public void SetCurrentMapName (string name) {
+		currentMapName = name;
+	}
+	
+	public void SetNextMap (string name) {
+		nextMapName = name;
+	}
+	
+//--- Cutscene Data ---//	
+
+	public string currentCutsceneName;
+	public string nextCutsceneName;
+	
+	public void SetCurrentCutsceneName (string name) {
+		currentCutsceneName = name;
+	}
+	
+	public void SetNextCutscene (string name) {
+		nextCutsceneName = name;
+	}
+	
 //--- Game Progress ---//
 	
 	public Dictionary<string, bool> gameProgress;

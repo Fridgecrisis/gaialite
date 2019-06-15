@@ -3,8 +3,9 @@
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -15,6 +16,6 @@ MonoBehaviour:
   playmakerVersion: 
   showWelcomeScreen: 1
   showUpgradeGuide: 0
-  lastAutoUpdateSignature: '2018.1.0f2__C:/Users/Jaron.Frost/Desktop/gaialite/Gaialite
+  lastAutoUpdateSignature: '2018.3.8f1__C:/Users/Jaron.Frost/Desktop/gaialite/Gaialite
     Gameplay Prototype/Assets__ '
   useLegacyNetworking: 0
