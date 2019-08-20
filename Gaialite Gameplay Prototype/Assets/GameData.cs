@@ -2,15 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//--- This class is for storing game variables and progress data. It does not actually run the game--that's the Game Master's job. ---//
 public class GameData : MonoBehaviour {
 
-	public GameObject GameManager;
-	
-	public string currentMapSceneName;
-	public string nextMapSceneName;
-	public string currentBattleName;
-	public string nextBattleName;
-	
+	public GameMaster gameMaster;
+
 	public bool seenIntro;
 	
 	void Start () {
@@ -22,40 +18,29 @@ public class GameData : MonoBehaviour {
 //--- Content Type ---//
 
 	public string currentContentType;
-	public string nextContentType;
-	
-	public void SetCurrentContentType (string name) {
-		currentContentType = name;
-	}
-	
-	public void SetNextContentType (string name) {
-		nextContentType = name;
-	}
-	
-//--- Map Data ---//
-	
 	public string currentMapName;
-	public string nextMapName;
+	public string currentBattleName;
+	public string currentCutsceneName;
+	public string currentDialogueName;
+	
+	public void SetCurrentContentType (string type) {
+		currentContentType = type;
+	}
 	
 	public void SetCurrentMapName (string name) {
 		currentMapName = name;
 	}
 	
-	public void SetNextMap (string name) {
-		nextMapName = name;
+	public void SetCurrentBattleName (string name) {
+		currentBattleName = name;
 	}
-	
-//--- Cutscene Data ---//	
-
-	public string currentCutsceneName;
-	public string nextCutsceneName;
 	
 	public void SetCurrentCutsceneName (string name) {
 		currentCutsceneName = name;
 	}
 	
-	public void SetNextCutscene (string name) {
-		nextCutsceneName = name;
+	public void SetCurrentDialogueName (string name) {
+		currentDialogueName = name;
 	}
 	
 //--- Game Progress ---//

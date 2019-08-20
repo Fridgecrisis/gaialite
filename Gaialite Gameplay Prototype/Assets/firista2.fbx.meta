@@ -1,0 +1,212 @@
+fileFormatVersion: 2
+guid: 0247b557135549a459471fd72fffb849
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: body
+    100002: //RootNode
+    100004: goggles_headband
+    100006: goggles_leftlens
+    100008: goggles_rightlens
+    100010: hair2
+    100012: halo
+    100014: head
+    100016: jacket
+    100018: jacket_jnt
+    100020: jacket_mid_jnt
+    100022: l_ankle_jnt
+    100024: l_arm
+    100026: l_clavicle_jnt
+    100028: l_elbow_jnt
+    100030: l_foot_jnt
+    100032: l_hand
+    100034: l_hip_jnt
+    100036: l_jacket_bottom_knt
+    100038: l_knee_jnt
+    100040: l_shoulder_jnt
+    100042: l_wing
+    100044: l_wing_jnt
+    100046: l_wrist_jnt
+    100048: lower_back_jnt
+    100050: mesh
+    100052: neck_jnt
+    100054: pelvis_jnt
+    100056: r_ankle_jnt
+    100058: r_arm
+    100060: r_clavicle_jnt
+    100062: r_elbow_jnt
+    100064: r_foot_jnt
+    100066: r_hand
+    100068: r_hip_jnt
+    100070: r_jacket_bottom_jnt
+    100072: r_knee_jnt
+    100074: r_shoulder
+    100076: r_shoulder2
+    100078: r_shoulder_jnt
+    100080: r_wing
+    100082: r_wing_jnt
+    100084: r_wrist_jnt
+    100086: root_jnt
+    100088: waist_jnt
+    400000: body
+    400002: //RootNode
+    400004: goggles_headband
+    400006: goggles_leftlens
+    400008: goggles_rightlens
+    400010: hair2
+    400012: halo
+    400014: head
+    400016: jacket
+    400018: jacket_jnt
+    400020: jacket_mid_jnt
+    400022: l_ankle_jnt
+    400024: l_arm
+    400026: l_clavicle_jnt
+    400028: l_elbow_jnt
+    400030: l_foot_jnt
+    400032: l_hand
+    400034: l_hip_jnt
+    400036: l_jacket_bottom_knt
+    400038: l_knee_jnt
+    400040: l_shoulder_jnt
+    400042: l_wing
+    400044: l_wing_jnt
+    400046: l_wrist_jnt
+    400048: lower_back_jnt
+    400050: mesh
+    400052: neck_jnt
+    400054: pelvis_jnt
+    400056: r_ankle_jnt
+    400058: r_arm
+    400060: r_clavicle_jnt
+    400062: r_elbow_jnt
+    400064: r_foot_jnt
+    400066: r_hand
+    400068: r_hip_jnt
+    400070: r_jacket_bottom_jnt
+    400072: r_knee_jnt
+    400074: r_shoulder
+    400076: r_shoulder2
+    400078: r_shoulder_jnt
+    400080: r_wing
+    400082: r_wing_jnt
+    400084: r_wrist_jnt
+    400086: root_jnt
+    400088: waist_jnt
+    2100000: lambert1
+    2300000: halo
+    2300002: r_shoulder
+    2300004: r_shoulder2
+    3300000: halo
+    3300002: r_shoulder
+    3300004: r_shoulder2
+    4300000: hair2
+    4300002: body
+    4300004: r_shoulder
+    4300006: r_hand
+    4300008: halo
+    4300010: r_wing
+    4300012: l_wing
+    4300014: l_hand
+    4300016: l_arm
+    4300018: goggles_leftlens
+    4300020: goggles_rightlens
+    4300022: goggles_headband
+    4300024: r_shoulder2
+    9500000: //RootNode
+    13700000: body
+    13700002: goggles_headband
+    13700004: goggles_leftlens
+    13700006: goggles_rightlens
+    13700008: hair2
+    13700010: l_arm
+    13700012: l_hand
+    13700014: l_wing
+    13700016: r_hand
+    13700018: r_wing
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
