@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-//--- This class is for storing game variables and progress data. It does not actually run the game--that's the Game Master's job. ---//
+//--- This object is for storing game variables and progress data. It does not actually run the game--that's the Game Master's job. ---//
 public class GameData : MonoBehaviour {
 
 	public GameMaster gameMaster;
@@ -47,17 +47,19 @@ public class GameData : MonoBehaviour {
 	
 	public Dictionary<string, bool> gameProgress;
 	
-	void InitializeProgress () {
+	public void InitializeProgress () {
+		//--- List ALL trackable progress items here. ---//
 		AddProgressItem("Seen intro", false);
+		AddProgressItem("Pickup box", false);
 	}
 	
-	void AddProgressItem (string name, bool progressValue = false) {
+	public void AddProgressItem (string name, bool progressValue = false) {
 		if (!gameProgress.ContainsKey(name)) {
 			gameProgress.Add(name, progressValue);
 		}
 	}
 	
-	bool GetProgress (string name) {
+	public bool GetProgress (string name) {
 		if (!gameProgress.ContainsKey(name)) {
 			Debug.LogWarning("Progress item '" + name + "' not found. Returning false.");
 			return false;
@@ -65,7 +67,7 @@ public class GameData : MonoBehaviour {
 		return gameProgress[name];
 	}
 	
-	void SetProgress (string name, bool progressValue = true) {
+	public void SetProgress (string name, bool progressValue = true) {
 		if (!gameProgress.ContainsKey(name)) {
 			gameProgress.Add(name, progressValue);
 		} else {

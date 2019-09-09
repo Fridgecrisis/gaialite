@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+//--- This object is responsible for running and managing the game. ---//
 public class GameMaster : MonoBehaviour
 {
 	public PlayMakerFSM gameStateMachine;
@@ -56,7 +57,6 @@ public class GameMaster : MonoBehaviour
 				Debug.LogWarning("Next content type not recognized.");
 				break;
 		}
-		UpdateStateMachines();
 	}
 	
 	void UpdateStateMachines () {
@@ -80,8 +80,7 @@ public class GameMaster : MonoBehaviour
 			battleStateMachine.gameObject.SetActive(true);
 			battleStateMachine.SendEvent("Activate");
 		} else if (mapDialogueStateMachine.gameObject.activeSelf == false && nextContentType == "dialogue") {
-			mapDialogueStateMachine.gameObject.SetActive(true);
-			mapDialogueStateMachine.SendEvent("Activate");
+			mapStateMachine.SendEvent("OpenDialogue");
 		}
 		
 		if (nextContentType == "return to map") {
@@ -96,11 +95,13 @@ public class GameMaster : MonoBehaviour
 	}
 	
 	public void StartMap (string name) {
+		SetNextContent("map", name);
 		EndCurrentMap();
 		EndCurrentCutscene();
 		EndCurrentBattle();
 		EndCurrentDialogue();
 		LoadMap(name);
+		UpdateStateMachines();
 	}
 	
 	public void EndCurrentMap () {
@@ -124,6 +125,7 @@ public class GameMaster : MonoBehaviour
 	}
 	
 	public void ReturnToMap () {
+		SetNextContent("return to map", name);
 		EndCurrentBattle();
 		EndCurrentDialogue();
 		if (gameData.currentMapName != "") {
@@ -131,6 +133,7 @@ public class GameMaster : MonoBehaviour
 		} else {
 			Debug.LogWarning("No current map to return to.");
 		}
+		UpdateStateMachines();
 	}
 	
 //--- Cutscene ---//
@@ -140,11 +143,13 @@ public class GameMaster : MonoBehaviour
 	}
 	
 	public void StartCutscene (string name) {
+		SetNextContent("cutscene", name);
 		EndCurrentMap();
 		EndCurrentCutscene();
 		EndCurrentBattle();
 		EndCurrentDialogue();
 		LoadCutscene(name);
+		UpdateStateMachines();
 	}
 	
 	public void EndCurrentCutscene () {
@@ -174,10 +179,12 @@ public class GameMaster : MonoBehaviour
 	}
 	
 	public void StartBattle (string name) {
+		SetNextContent("battle", name);
 		EndCurrentCutscene();
 		EndCurrentBattle();
 		EndCurrentDialogue();
 		LoadBattle(name);
+		UpdateStateMachines();
 	}
 	
 	public void EndCurrentBattle () {
@@ -207,10 +214,12 @@ public class GameMaster : MonoBehaviour
 	}
 	
 	public void StartDialogue (string name) {
+		SetNextContent("dialogue", name);
 		EndCurrentCutscene();
 		EndCurrentBattle();
 		EndCurrentDialogue();
 		LoadDialogue(name);
+		UpdateStateMachines();
 	}
 	
 	public void EndCurrentDialogue () {

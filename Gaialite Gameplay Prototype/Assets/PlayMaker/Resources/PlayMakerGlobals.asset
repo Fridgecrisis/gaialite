@@ -64,3 +64,6 @@ MonoBehaviour:
   - LoadNext
   - BeginBattle
   - BeginDialogue
+  - OpenDialogue
+  - CloseDialogue
+  - NextSentence
