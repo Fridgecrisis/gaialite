@@ -925,6 +925,7 @@
      <Compile Include="Assets\PlayMaker\FsmProcessor.cs" />
      <Compile Include="Assets\PlayMaker\UpdateHelper.cs" />
      <Compile Include="Assets\SetActionFlags.cs" />
+     <Compile Include="Assets\TeleportVolume.cs" />
      <None Include="Assets\PlayMaker\Templates\Readme.txt" />
      <None Include="Assets\PlayMaker\Readme.txt" />
      <None Include="Assets\PlayMaker\Resources\PlayMakerAssemblies.txt" />

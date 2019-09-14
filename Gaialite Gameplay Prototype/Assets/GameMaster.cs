@@ -17,9 +17,11 @@ public class GameMaster : MonoBehaviour
 	
 	public string nextContentType;
 	public string nextContentName;
+	public string nextSpawnPoint;
+	public GameObject player;
 	
     void Start() {
-        
+		
     }
 
     void Update() {
@@ -119,6 +121,17 @@ public class GameMaster : MonoBehaviour
 			Debug.Log("Loading map: " + name);
 			SceneManager.LoadScene(name, LoadSceneMode.Additive);
 			UpdateGameData("map", name);
+			if (nextSpawnPoint != "") {
+				Debug.Log("Moving player to spawn point: " + nextSpawnPoint);
+				var spawn = GameObject.Find(nextSpawnPoint);
+				if (spawn == null) {
+					Debug.LogWarning("Spawn point " + nextSpawnPoint + " not found!");
+				} else {
+					player.transform.position = spawn.transform.position;
+					player.transform.rotation = spawn.transform.rotation;
+				}
+				nextSpawnPoint = "";
+			}
 		} else {
 			Debug.Log("Loading map: No map to load.");
 		}

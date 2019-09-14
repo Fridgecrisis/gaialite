@@ -3686,6 +3686,8 @@ MonoBehaviour:
   gameData: {fileID: 773896638}
   nextContentType: 
   nextContentName: 
+  nextSpawnPoint: 
+  player: {fileID: 1701984263}
 --- !u!4 &598115310
 Transform:
   m_ObjectHideFlags: 0
@@ -5845,6 +5847,10 @@ PrefabInstance:
     - target: {fileID: 100006, guid: 769f000afd72e954da5c2120704949da, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: 769f000afd72e954da5c2120704949da, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: 769f000afd72e954da5c2120704949da, type: 3}
       propertyPath: m_LocalPosition.x
